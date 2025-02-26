@@ -7,10 +7,10 @@ const UI = (function() {
     
     // DOM elements cache
     const elements = {
-        exerciseCard: document.querySelector('.exercise-card'),
+        exerciseCard: document.getElementById('exercise-card'),
         topicFilters: document.getElementById('topic-filters'),
-        generateButton: document.querySelector('.generate-btn'),
-        loadingIndicator: document.querySelector('.loading-indicator')
+        generateButton: document.getElementById('generate-btn'),
+        loadingIndicator: document.getElementById('loading-indicator')
     };
     
     // Exercise structure elements reference
@@ -20,8 +20,22 @@ const UI = (function() {
      * Initialize topic filter buttons
      */
     function initializeTopicFilters() {
+        console.log('Initializing topic filters...');
+        
+        // Make sure the topicFilters element exists
+        if (!elements.topicFilters) {
+            console.error('Topic filters container not found');
+            return; // Exit gracefully
+        }
+        
         // Get categories
-        const categories = ExerciseManager.getAllCategories();
+        const categories = PoetryGymData.getCategories();
+        
+        if (!categories || categories.length === 0) {
+            console.warn('No categories available for filters');
+            elements.topicFilters.innerHTML = '<span class="filter-note">No topics available</span>';
+            return;
+        }
         
         // Clear existing filters
         elements.topicFilters.innerHTML = '';
@@ -38,6 +52,8 @@ const UI = (function() {
             
             elements.topicFilters.appendChild(button);
         });
+        
+        console.log('Topic filters initialized with', categories.length, 'categories');
     }
     
     /**
@@ -55,6 +71,43 @@ const UI = (function() {
                 button.classList.remove('active');
             }
         });
+    }
+    
+    /**
+     * Show loading state
+     */
+    function showLoadingState() {
+        // Make sure the loading indicator exists
+        if (!elements.loadingIndicator) {
+            elements.loadingIndicator = document.createElement('div');
+            elements.loadingIndicator.className = 'loading-indicator';
+            elements.loadingIndicator.innerHTML = '<span>Loading exercises...</span>';
+            elements.exerciseCard.appendChild(elements.loadingIndicator);
+        } else {
+            elements.loadingIndicator.classList.remove('hidden');
+        }
+        
+        // Disable generate button during loading
+        if (elements.generateButton) {
+            elements.generateButton.disabled = true;
+            elements.generateButton.classList.add('disabled');
+        }
+    }
+    
+    /**
+     * Hide loading state
+     */
+    function hideLoadingState() {
+        // Hide the loading indicator
+        if (elements.loadingIndicator) {
+            elements.loadingIndicator.classList.add('hidden');
+        }
+        
+        // Enable generate button
+        if (elements.generateButton) {
+            elements.generateButton.disabled = false;
+            elements.generateButton.classList.remove('disabled');
+        }
     }
     
     /**
@@ -172,27 +225,46 @@ const UI = (function() {
      * Display an exercise
      */
     function displayExercise(exercise) {
+        console.log('Displaying exercise:', exercise.id);
+        
+        // Ensure we have a valid exercise object
+        if (!exercise) {
+            console.error('No exercise data provided');
+            Utils.showError('Failed to load exercise data');
+            return;
+        }
+        
         // Create/get structure elements if needed
         if (!exerciseElements) {
             exerciseElements = createExerciseStructure();
         }
         
-        // Update content
-        exerciseElements.title.textContent = exercise.title;
-        exerciseElements.topicTag.textContent = exercise.topics[0].charAt(0).toUpperCase() + exercise.topics[0].slice(1);
-        exerciseElements.levelTag.textContent = exercise.level.charAt(0).toUpperCase() + exercise.level.slice(1);
-        exerciseElements.context.textContent = exercise.context;
-        exerciseElements.quote.innerHTML = exercise.quote.replace(/\n/g, '<br>');
-        exerciseElements.attribution.textContent = exercise.attribution;
-        exerciseElements.task.textContent = exercise.task;
+        // Update content with fallbacks
+        exerciseElements.title.textContent = exercise.title || 'Untitled Exercise';
+        
+        if (exercise.topics && exercise.topics.length > 0) {
+            exerciseElements.topicTag.textContent = exercise.topics[0].charAt(0).toUpperCase() + exercise.topics[0].slice(1);
+        } else {
+            exerciseElements.topicTag.textContent = 'General';
+        }
+        
+        exerciseElements.levelTag.textContent = (exercise.level || 'intermediate').charAt(0).toUpperCase() + 
+                                               (exercise.level || 'intermediate').slice(1);
+        
+        exerciseElements.context.textContent = exercise.context || '';
+        exerciseElements.quote.innerHTML = (exercise.quote || '').replace(/\n/g, '<br>');
+        exerciseElements.attribution.textContent = exercise.attribution || '';
+        exerciseElements.task.textContent = exercise.task || '';
         
         // Populate instructions list
         exerciseElements.instructions.innerHTML = '';
-        exercise.instructions.forEach(instruction => {
-            const li = document.createElement('li');
-            li.textContent = instruction;
-            exerciseElements.instructions.appendChild(li);
-        });
+        if (exercise.instructions && exercise.instructions.length > 0) {
+            exercise.instructions.forEach(instruction => {
+                const li = document.createElement('li');
+                li.textContent = instruction;
+                exerciseElements.instructions.appendChild(li);
+            });
+        }
         
         // Clear the writing field
         exerciseElements.writingField.value = '';
@@ -216,7 +288,7 @@ const UI = (function() {
             })
             .catch(err => {
                 console.error('Error copying text: ', err);
-                showError('Could not copy text. Please try again.');
+                Utils.showError('Could not copy text. Please try again.');
             });
     }
     
@@ -261,87 +333,12 @@ const UI = (function() {
         }, 1000);
     }
     
-    /**
-     * Show a message to the user
-     */
-    function showMessage(message, duration = 3000) {
-        const messageElement = document.createElement('div');
-        messageElement.className = 'message';
-        messageElement.textContent = message;
-        
-        document.body.appendChild(messageElement);
-        
-        setTimeout(() => {
-            messageElement.classList.add('show');
-        }, 10);
-        
-        setTimeout(() => {
-            messageElement.classList.remove('show');
-            setTimeout(() => {
-                messageElement.remove();
-            }, 300);
-        }, duration);
-    }
-    
-    /**
-     * Show an error message
-     */
-    function showError(message) {
-        showMessage(message, 5000);
-    }
-    
     // Public API
     return {
         initializeTopicFilters,
         updateTopicFilters,
         displayExercise,
-        showMessage,
-        showError
+        showLoadingState,
+        hideLoadingState
     };
 })();
-
-// Add these new functions to the UI module
-
-/**
- * Show loading state
- */
-function showLoadingState() {
-    // Make sure the loading indicator exists
-    if (!elements.loadingIndicator) {
-        elements.loadingIndicator = document.createElement('div');
-        elements.loadingIndicator.className = 'loading-indicator';
-        elements.loadingIndicator.innerHTML = '<span>Loading exercises...</span>';
-        elements.exerciseCard.appendChild(elements.loadingIndicator);
-    } else {
-        elements.loadingIndicator.classList.remove('hidden');
-    }
-    
-    // Disable generate button during loading
-    if (elements.generateButton) {
-        elements.generateButton.disabled = true;
-        elements.generateButton.classList.add('disabled');
-    }
-}
-
-/**
- * Hide loading state
- */
-function hideLoadingState() {
-    // Hide the loading indicator
-    if (elements.loadingIndicator) {
-        elements.loadingIndicator.classList.add('hidden');
-    }
-    
-    // Enable generate button
-    if (elements.generateButton) {
-        elements.generateButton.disabled = false;
-        elements.generateButton.classList.remove('disabled');
-    }
-}
-
-// Add these functions to the public API return statement
-return {
-    // ... existing functions
-    showLoadingState,
-    hideLoadingState
-};
