@@ -72,4 +72,8 @@
     .exercise-card {
         padding: 1rem;
     }
+    
+    .poem-quote {
+        padding: 0.5rem 0.75rem;
+    }
 }
