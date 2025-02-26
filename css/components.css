@@ -1,0 +1,266 @@
+/* Filter Section */
+.filter-section {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    padding: 0 0 0 1rem;
+    height: 2.5rem;
+}
+
+.filter-group {
+    display: flex;
+    align-items: center;
+    gap: 0.25rem;
+}
+
+.filter-title {
+    font-size: 0.7rem;
+    color: #777;
+    margin-right: 0.15rem;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    white-space: nowrap;
+}
+
+.topic-filters {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.3rem;
+}
+
+.filter-btn {
+    background: transparent;
+    border: none;
+    border-bottom: 1px solid transparent;
+    padding: 0.15rem 0.3rem;
+    cursor: pointer;
+    font-family: inherit;
+    transition: all 0.2s ease;
+    font-size: 0.7rem;
+    color: #666;
+    letter-spacing: 0.3px;
+}
+
+.filter-btn:hover {
+    border-bottom: 1px solid var(--accent-color);
+    color: var(--accent-color);
+}
+
+.filter-btn.active {
+    border-bottom: 1px solid var(--accent-color);
+    color: var(--accent-color);
+    font-weight: 500;
+}
+
+.generate-btn {
+    background-color: transparent;
+    color: var(--accent-color);
+    border: 1px solid var(--accent-color);
+    padding: 0.2rem 0.7rem;
+    border-radius: 0;
+    cursor: pointer;
+    font-family: inherit;
+    font-size: 0.7rem;
+    transition: all 0.2s ease;
+    white-space: nowrap;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    margin-left: 0.5rem;
+}
+
+.generate-btn:hover {
+    background-color: var(--accent-color);
+    color: white;
+}
+
+/* Exercise Components */
+.exercise-header {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 1.5rem;
+    align-items: baseline;
+    border-bottom: 1px solid #f0f0f0;
+    padding-bottom: 0.75rem;
+}
+
+.exercise-title {
+    font-size: 1.5rem;
+    color: var(--primary-color);
+    font-weight: 400;
+    font-family: 'Cormorant Garamond', Georgia, serif;
+}
+
+.exercise-meta {
+    font-size: 0.7rem;
+    color: #999;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.exercise-content {
+    font-size: 0.95rem;
+    line-height: 1.7;
+    color: #444;
+    font-weight: 300;
+    letter-spacing: 0.01rem;
+}
+
+.exercise-content p {
+    margin-bottom: 1rem;
+}
+
+.context {
+    margin-bottom: 1rem;
+    font-size: 0.95rem;
+    color: #555;
+    font-style: italic;
+    line-height: 1.6;
+}
+
+.poem-quote {
+    font-style: italic;
+    margin: 1rem 0;
+    padding: 0.75rem 1rem;
+    border-left: 2px solid var(--accent-color);
+    color: #555;
+    background-color: #f9f9f9;
+    position: relative;
+    font-size: 0.9rem;
+    line-height: 1.7;
+}
+
+.poem-quote::before {
+    content: '"';
+    position: absolute;
+    left: -0.5rem;
+    top: -0.5rem;
+    font-size: 2rem;
+    color: var(--accent-color);
+    opacity: 0.3;
+    font-family: Georgia, serif;
+}
+
+.poem-attribution {
+    font-size: 0.8rem;
+    text-align: right;
+    color: #888;
+    margin-bottom: 1rem;
+}
+
+.task {
+    margin-bottom: 1rem;
+    font-weight: 500;
+    color: var(--accent-color);
+}
+
+.task-list {
+    padding-left: 1.2rem;
+    margin-bottom: 1.5rem;
+}
+
+.task-list li {
+    margin-bottom: 0.5rem;
+    font-size: 0.95rem;
+}
+
+.writing-area {
+    margin-top: 1.5rem;
+}
+
+.writing-field {
+    width: 100%;
+    min-height: 200px;
+    padding: 1rem;
+    border: 1px solid #ddd;
+    font-family: 'Cormorant Garamond', Georgia, serif;
+    font-size: 1rem;
+    line-height: 1.6;
+    resize: vertical;
+    background-color: #fafafa;
+}
+
+.writing-field:focus {
+    outline: none;
+    border-color: var(--accent-color);
+    background-color: white;
+}
+
+.writing-actions {
+    display: flex;
+    gap: 1.5rem;
+    margin-top: 1.2rem;
+}
+
+.copy-btn, .complete-btn {
+    flex: 1;
+    background-color: var(--accent-color);
+    color: white;
+    border: none;
+    padding: 0.75rem 0;
+    cursor: pointer;
+    font-family: inherit;
+    font-size: 0.85rem;
+    transition: all 0.3s ease;
+    letter-spacing: 0.5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 2.75rem;
+    /* Equal size fix */
+    min-width: calc(50% - 0.75rem);
+    max-width: calc(50% - 0.75rem); 
+}
+
+.copy-btn {
+    background-color: var(--btn-secondary-color);
+}
+
+.copy-btn:hover {
+    background-color: var(--btn-secondary-hover);
+    transform: translateY(-2px);
+}
+
+.complete-btn:hover {
+    background-color: var(--btn-primary-hover);
+    transform: translateY(-2px);
+}
+
+.copy-btn svg {
+    width: 16px;
+    height: 16px;
+    margin-right: 8px;
+}
+
+/* Animation Effects */
+@keyframes ink-splash {
+    0% {
+        transform: scale(0);
+        opacity: 0.7;
+    }
+    100% {
+        transform: scale(3);
+        opacity: 0;
+    }
+}
+
+.ink-splash {
+    position: absolute;
+    background: rgba(123, 80, 111, 0.15);
+    border-radius: 50%;
+    pointer-events: none;
+    width: 100px;
+    height: 100px;
+    transform: scale(0);
+}
+
+@keyframes card-completion {
+    0% {
+        box-shadow: 0 1px 20px rgba(0,0,0,0.03);
+    }
+    50% {
+        box-shadow: 0 0 30px rgba(123, 80, 111, 0.3);
+    }
+    100% {
+        box-shadow: 0 1px 20px rgba(0,0,0,0.03);
+    }
+}
