@@ -1,100 +1,45 @@
+// Add these new functions to the UI module
+
 /**
- * Main application script for The Poetry Gym
+ * Show loading state
  */
-(function() {
-    'use strict';
-    
-    // App state
-    const state = {
-        selectedTopics: [],
-        currentExercise: null,
-        exercisesLoaded: false
-    };
-    
-    // Initialize the application
-    async function init() {
-        try {
-            // Load categories first
-            await ExerciseManager.loadCategories();
-            
-            // Initialize UI components
-            UI.initializeTopicFilters();
-            
-            // Set up event listeners
-            setupEventListeners();
-            
-            // Start loading exercises
-            await ExerciseManager.loadExercises();
-            state.exercisesLoaded = true;
-            
-            // Generate first exercise
-            generateNewExercise();
-            
-        } catch (error) {
-            console.error('Error initializing app:', error);
-            UI.showError('Failed to initialize the app. Please refresh the page.');
-        }
+function showLoadingState() {
+    // Make sure the loading indicator exists
+    if (!elements.loadingIndicator) {
+        elements.loadingIndicator = document.createElement('div');
+        elements.loadingIndicator.className = 'loading-indicator';
+        elements.loadingIndicator.innerHTML = '<span>Loading exercises...</span>';
+        elements.exerciseCard.appendChild(elements.loadingIndicator);
+    } else {
+        elements.loadingIndicator.classList.remove('hidden');
     }
     
-    // Set up event listeners
-    function setupEventListeners() {
-        // Generate button
-        const generateButton = document.querySelector('.generate-btn');
-        generateButton.addEventListener('click', generateNewExercise);
-        
-        // Topic filter buttons will be set up by UI.initializeTopicFilters()
+    // Disable generate button during loading
+    if (elements.generateButton) {
+        elements.generateButton.disabled = true;
+        elements.generateButton.classList.add('disabled');
+    }
+}
+
+/**
+ * Hide loading state
+ */
+function hideLoadingState() {
+    // Hide the loading indicator
+    if (elements.loadingIndicator) {
+        elements.loadingIndicator.classList.add('hidden');
     }
     
-    // Generate a new exercise
-    function generateNewExercise() {
-        if (!state.exercisesLoaded) {
-            UI.showMessage('Loading exercises, please wait...');
-            return;
-        }
-        
-        try {
-            // Filter exercises based on selected topics
-            const filteredExercises = ExerciseManager.filterExercisesByTopics(state.selectedTopics);
-            
-            if (filteredExercises.length === 0) {
-                UI.showMessage('No exercises match your selected criteria. Try different filters!');
-                return;
-            }
-            
-            // Get a random exercise
-            const randomExercise = Utils.getRandomItem(filteredExercises);
-            state.currentExercise = randomExercise;
-            
-            // Display the exercise
-            UI.displayExercise(randomExercise);
-            
-        } catch (error) {
-            console.error('Error generating exercise:', error);
-            UI.showError('Failed to generate an exercise. Please try again.');
-        }
+    // Enable generate button
+    if (elements.generateButton) {
+        elements.generateButton.disabled = false;
+        elements.generateButton.classList.remove('disabled');
     }
-    
-    // Topic selection handler
-    function toggleTopic(topic) {
-        if (state.selectedTopics.includes(topic)) {
-            // Remove topic
-            state.selectedTopics = state.selectedTopics.filter(t => t !== topic);
-        } else {
-            // Add topic
-            state.selectedTopics.push(topic);
-        }
-        
-        // Update UI
-        UI.updateTopicFilters(state.selectedTopics);
-    }
-    
-    // Public API
-    window.PoetryGym = {
-        init,
-        toggleTopic,
-        generateNewExercise
-    };
-    
-    // Initialize when DOM is loaded
-    document.addEventListener('DOMContentLoaded', init);
-})();
+}
+
+// Add these functions to the public API return statement
+return {
+    // ... existing functions
+    showLoadingState,
+    hideLoadingState
+};
