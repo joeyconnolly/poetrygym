@@ -56,77 +56,42 @@ const ExerciseManager = (function() {
     /**
      * Load categories data from JSON
      */
-    async function loadCategories() {
-        try {
-            const response = await fetch('data/categories.json');
-            
-            if (!response.ok) {
-                throw new Error('Failed to load categories');
-            }
-            
-            data.categories = await response.json();
-            return data.categories;
-            
-        } catch (error) {
-            console.error('Error loading categories:', error);
-            // Use default categories
-            data.categories = [
-                { id: 'rhyme', name: 'Rhyme' },
-                { id: 'rhythm', name: 'Rhythm' },
-                { id: 'prosody', name: 'Prosody' },
-                { id: 'image-making', name: 'Image' },
-                { id: 'metaphor', name: 'Metaphor' },
-                { id: 'form', name: 'Form' },
-                { id: 'line-breaks', name: 'Line Breaks' },
-                { id: 'stanza', name: 'Stanza' },
-                { id: 'sound', name: 'Sound' },
-                { id: 'voice', name: 'Voice' },
-                { id: 'alliteration', name: 'Alliteration' },
-                { id: 'assonance', name: 'Assonance' },
-                { id: 'repetition', name: 'Repetition' },
-                { id: 'persona', name: 'Persona' }
-            ];
-            return data.categories;
+async function loadCategories() {
+    try {
+        // Add base path for GitHub Pages
+        const basePath = window.location.pathname.includes('/your-repo-name/') ? '/your-repo-name' : '';
+        const response = await fetch(`${basePath}/data/categories.json`);
+        
+        if (!response.ok) {
+            throw new Error('Failed to load categories');
         }
+        
+        data.categories = await response.json();
+        return data.categories;
+        
+    } catch (error) {
+        console.error('Error loading categories:', error);
+        // Use default categories
+        // ...rest of function
     }
-    
-    /**
-     * Load all exercises from a single JSON file
-     */
-    async function loadExercises() {
-        try {
-            // Fetch the single JSON file containing all exercises
-            const response = await fetch('data/all-exercises.json');
-            
-            if (!response.ok) {
-                throw new Error('Failed to load exercises');
-            }
-            
-            const exerciseData = await response.json();
-            
-            // Store metadata
-            data.version = exerciseData.version;
-            data.lastUpdated = exerciseData.lastUpdated;
-            
-            // Store all exercises
-            data.exercises = exerciseData.exercises;
-            
-            // Create indexes for faster access
-            indexExercises(data.exercises);
-            
-            // Log some stats about the loaded exercises
-            console.log(`Loaded ${data.exercises.length} exercises (version ${data.version})`);
-            
-            return data.exercises;
-            
-        } catch (error) {
-            console.error('Error loading exercises:', error);
-            // Use default exercises as fallback
-            data.exercises = [...defaultExercises];
-            indexExercises(data.exercises);
-            return data.exercises;
+}
+
+async function loadExercises() {
+    try {
+        // Add base path for GitHub Pages
+        const basePath = window.location.pathname.includes('/your-repo-name/') ? '/your-repo-name' : '';
+        const response = await fetch(`${basePath}/data/all-exercises.json`);
+        
+        if (!response.ok) {
+            throw new Error('Failed to load exercises');
         }
+        
+        // Rest of function
+        // ...
+    } catch (error) {
+        // ...
     }
+}
     
     /**
      * Index exercises for faster access
