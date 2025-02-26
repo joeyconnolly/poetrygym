@@ -255,3 +255,5 @@ const PoetryGymData = (function() {
             estimatedTime: "30-45 minutes",
             tags: ["blank verse", "narrative", "iambic pentameter", "storytelling", "formal"]
         }
+    };
+})();
