@@ -1,6 +1,6 @@
 /**
  * Exercise management module for The Poetry Gym
- * Handles loading, filtering, and managing exercise data
+ * Handles loading, filtering, and managing exercise data from a single JSON file
  */
 const ExerciseManager = (function() {
     'use strict';
@@ -9,12 +9,16 @@ const ExerciseManager = (function() {
     const data = {
         exercises: [],
         categories: [],
-        exercisesByTopic: {}
+        exercisesByTopic: {},
+        exercisesById: {},
+        version: null,
+        lastUpdated: null
     };
     
     // Default exercises (for initial/fallback use)
     const defaultExercises = [
         {
+            id: "image-chain-01",
             title: "Image Chain",
             topics: ["image-making"],
             level: "intermediate",
@@ -31,6 +35,7 @@ const ExerciseManager = (function() {
             ]
         },
         {
+            id: "end-to-end-rhyming-01",
             title: "End-to-End Rhyming",
             topics: ["rhyme"],
             level: "starting",
@@ -86,38 +91,64 @@ const ExerciseManager = (function() {
     }
     
     /**
-     * Load exercise data from topic subdirectories
-     * For large datasets, this can be optimized to load only a subset initially
+     * Load all exercises from a single JSON file
      */
     async function loadExercises() {
         try {
-            // For full implementation, you would fetch from the server
-            // This is a placeholder for the actual fetch logic
+            // Fetch the single JSON file containing all exercises
+            const response = await fetch('data/all-exercises.json');
             
-            // In a real implementation, you would loop through topics
-            // and fetch exercises from each topic directory
+            if (!response.ok) {
+                throw new Error('Failed to load exercises');
+            }
             
-            // For now, we'll use the default exercises
-            data.exercises = [...defaultExercises];
+            const exerciseData = await response.json();
             
-            // Organize exercises by topic for faster filtering
-            data.exercises.forEach(exercise => {
-                exercise.topics.forEach(topic => {
-                    if (!data.exercisesByTopic[topic]) {
-                        data.exercisesByTopic[topic] = [];
-                    }
-                    data.exercisesByTopic[topic].push(exercise);
-                });
-            });
+            // Store metadata
+            data.version = exerciseData.version;
+            data.lastUpdated = exerciseData.lastUpdated;
+            
+            // Store all exercises
+            data.exercises = exerciseData.exercises;
+            
+            // Create indexes for faster access
+            indexExercises(data.exercises);
+            
+            // Log some stats about the loaded exercises
+            console.log(`Loaded ${data.exercises.length} exercises (version ${data.version})`);
             
             return data.exercises;
             
         } catch (error) {
             console.error('Error loading exercises:', error);
-            // Use default exercises
+            // Use default exercises as fallback
             data.exercises = [...defaultExercises];
+            indexExercises(data.exercises);
             return data.exercises;
         }
+    }
+    
+    /**
+     * Index exercises for faster access
+     */
+    function indexExercises(exercises) {
+        // Reset indexes
+        data.exercisesByTopic = {};
+        data.exercisesById = {};
+        
+        // Create indexes
+        exercises.forEach(exercise => {
+            // Index by ID
+            data.exercisesById[exercise.id] = exercise;
+            
+            // Index by topics
+            exercise.topics.forEach(topic => {
+                if (!data.exercisesByTopic[topic]) {
+                    data.exercisesByTopic[topic] = [];
+                }
+                data.exercisesByTopic[topic].push(exercise);
+            });
+        });
     }
     
     /**
@@ -155,6 +186,28 @@ const ExerciseManager = (function() {
         return data.exercisesByTopic[topic] || [];
     }
     
+    /**
+     * Get an exercise by ID
+     */
+    function getExerciseById(id) {
+        return data.exercisesById[id] || null;
+    }
+    
+    /**
+     * Get metadata about the exercise collection
+     */
+    function getMetadata() {
+        return {
+            version: data.version,
+            lastUpdated: data.lastUpdated,
+            totalExercises: data.exercises.length,
+            topicCounts: Object.keys(data.exercisesByTopic).reduce((counts, topic) => {
+                counts[topic] = data.exercisesByTopic[topic].length;
+                return counts;
+            }, {})
+        };
+    }
+    
     // Public API
     return {
         loadCategories,
@@ -162,6 +215,8 @@ const ExerciseManager = (function() {
         getAllExercises,
         getAllCategories,
         filterExercisesByTopics,
-        getExercisesByTopic
+        getExercisesByTopic,
+        getExerciseById,
+        getMetadata
     };
 })();
