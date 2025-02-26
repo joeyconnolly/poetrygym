@@ -73,6 +73,11 @@
     color: white;
 }
 
+.generate-btn.disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
 /* Exercise Components */
 .exercise-header {
     display: flex;
@@ -208,7 +213,7 @@
     min-height: 2.75rem;
     /* Equal size fix */
     min-width: calc(50% - 0.75rem);
-    max-width: calc(50% - 0.75rem); 
+    max-width: calc(50% - 0.75rem);
 }
 
 .copy-btn {
