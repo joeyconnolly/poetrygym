@@ -1,0 +1,16 @@
+[
+  { "id": "rhyme", "name": "Rhyme", "description": "Exercises focusing on different rhyme schemes and techniques" },
+  { "id": "rhythm", "name": "Rhythm", "description": "Explore poetic rhythm and meter" },
+  { "id": "prosody", "name": "Prosody", "description": "Study of sound and rhythm in poetry" },
+  { "id": "image-making", "name": "Image", "description": "Create vivid and compelling poetic images" },
+  { "id": "metaphor", "name": "Metaphor", "description": "Develop metaphorical language and comparisons" },
+  { "id": "form", "name": "Form", "description": "Work with traditional and contemporary poetic forms" },
+  { "id": "line-breaks", "name": "Line Breaks", "description": "Practice the art of line breaks and enjambment" },
+  { "id": "stanza", "name": "Stanza", "description": "Explore stanza forms and structures" },
+  { "id": "sound", "name": "Sound", "description": "Focus on the sound qualities in poetry" },
+  { "id": "voice", "name": "Voice", "description": "Develop a distinctive poetic voice" },
+  { "id": "alliteration", "name": "Alliteration", "description": "Use repeated consonant sounds for effect" },
+  { "id": "assonance", "name": "Assonance", "description": "Work with repeated vowel sounds" },
+  { "id": "repetition", "name": "Repetition", "description": "Employ repetition as a poetic device" },
+  { "id": "persona", "name": "Persona", "description": "Write from different perspectives and voices" }
+]
