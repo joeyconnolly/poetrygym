@@ -1,0 +1,122 @@
+/* Global Styles */
+:root {
+    --primary-color: #333;
+    --accent-color: #7b506f;
+    --light-color: #f9f9f9;
+    --dark-color: #333;
+    --border-color: #e0e0e0;
+    --bg-color: #fcfcfc;
+    --btn-secondary-color: #6b7d6a;
+    --btn-secondary-hover: #556954;
+    --btn-primary-hover: #694260;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Cormorant Garamond', 'Libre Baskerville', Georgia, serif;
+    line-height: 1.6;
+    color: var(--dark-color);
+    background-color: var(--bg-color);
+    padding: 0;
+    max-width: 100%;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* Header Styles */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    border-bottom: 1px solid var(--border-color);
+    background-color: white;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.03);
+}
+
+.site-identity {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+h1 {
+    font-size: 1.2rem;
+    font-weight: 400;
+    letter-spacing: 1px;
+    color: var(--primary-color);
+    font-family: 'Cormorant Garamond', Georgia, serif;
+}
+
+.tagline {
+    font-style: italic;
+    color: #888;
+    font-size: 0.75rem;
+    font-weight: 300;
+}
+
+/* Exercise Section */
+.exercise-section {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 1.5rem 2rem;
+    min-height: calc(100vh - 6rem);
+    background-color: var(--bg-color);
+    overflow-y: auto;
+}
+
+.exercise-card {
+    max-width: 700px;
+    width: 100%;
+    padding: 2rem;
+    background-color: white;
+    box-shadow: 0 1px 20px rgba(0,0,0,0.03);
+    border: 1px solid rgba(0,0,0,0.04);
+    position: relative;
+    overflow: hidden;
+}
+
+.loading-indicator {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 200px;
+    font-style: italic;
+    color: #888;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 1rem 0;
+    color: #999;
+    font-size: 0.7rem;
+    letter-spacing: 0.5px;
+    border-top: 1px solid var(--border-color);
+    background-color: white;
+}
+
+/* Utility Classes */
+.hidden {
+    display: none !important;
+}
+
+.visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    padding: 0;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    border: 0;
+}
