@@ -421,7 +421,407 @@ const PoetryGymData = (function() {
         difficulty: 3,
         estimatedTime: "15-20 minutes",
         tags: ["no rhyme", "slant rhyme", "rhythm"]
-    }
+    },
+  {
+    id: "rhyme-01",
+    title: "Couplet Focus",
+    context: "Rhyming couplets create a tight, closed form, often used to provide neat closure or a punchy effect. This exercise helps you practice perfect rhymes and the finality they can bring.",
+    quote: "True wit is Nature to advantage dress'd,\nWhat oft was thought, but ne'er so well express'd.",
+    attribution: "— Alexander Pope (from 'Essay on Criticism')",
+    task: "Compose short poems in neat, end-rhyming couplets to train your ear for perfect rhymes.",
+    instructions: [
+      "Step 1: Write two lines (one couplet) that end in perfect rhymes (e.g., day/play). Keep the lines relatively short (6–8 syllables) so the rhyme stands out.",
+      "Step 2: Write another couplet on a different topic, again ensuring you have a perfect rhyme at each line-end.",
+      "Step 3: Combine both couplets into a four-line poem. Read aloud—does the rhyme feel forced or smooth?",
+      "Step 4: Revise any awkward phrases, focusing on the naturalness of your diction while maintaining rhyme."
+    ],
+    created: "2025-02-27",
+    lastModified: "2025-02-27",
+    author: "Poetry Gym Team",
+    difficulty: 2,
+    estimatedTime: "10-15 minutes",
+    tags: ["rhyme", "repetition", "sound"]
+  },
+  {
+    id: "rhyme-02",
+    title: "Hidden Internal Rhymes",
+    context: "Internal rhymes can unify lines without the sing-song effect of end-rhyme. They reward close reading and can add subtle sonic cohesion.",
+    quote: "The whiskey on your breath\nCould make a small boy dizzy;",
+    attribution: "— Theodore Roethke (from 'My Papa's Waltz')",
+    task: "Place internal rhymes at least once in each line to create an echo effect.",
+    instructions: [
+      "Step 1: Write a four-line poem about any memory, ensuring each line hides a rhyme in the middle with the end word (e.g., 'ding' in the middle and 'ring' at the end).",
+      "Step 2: Read it aloud—can you catch the 'hidden' rhyme? If not, adjust word choices to highlight it more strongly.",
+      "Step 3: Write a second four-line poem where you embed two internal rhymes in each line for an even richer effect.",
+      "Step 4: Compare the two poems. Which style of internal rhyming feels more natural to you?"
+    ],
+    created: "2025-02-27",
+    lastModified: "2025-02-27",
+    author: "Poetry Gym Team",
+    difficulty: 3,
+    estimatedTime: "15-20 minutes",
+    tags: ["rhyme", "sound", "repetition"]
+  },
+  {
+    id: "rhyme-03",
+    title: "Slant Rhyme Explorations",
+    context: "Slant (or near) rhymes offer subtle musicality. Contemporary poets often prefer them for their richness and unpredictability.",
+    quote: "\"Tell all the Truth but tell it slant—\",\nSuccess in Circuit lies",
+    attribution: "— Emily Dickinson",
+    task: "Experiment with slant rhymes to create nuanced echoes rather than perfect matches.",
+    instructions: [
+      "Step 1: Write four lines where the end words almost rhyme (e.g., stone/swan, room/storm). Focus on consistent vowel sounds but differing consonants.",
+      "Step 2: In a second stanza, deliberately push the slant even further—pick words that share only partial similarity (time/shine).",
+      "Step 3: Compare these stanzas. Notice how each near rhyme changes the poem’s musicality versus perfect rhyme.",
+      "Step 4: Revise for clarity. Keep the slant rhymes crisp so they’re noticeable but not jarring."
+    ],
+    created: "2025-02-27",
+    lastModified: "2025-02-27",
+    author: "Poetry Gym Team",
+    difficulty: 3,
+    estimatedTime: "15-20 minutes",
+    tags: ["rhyme", "sound", "assonance"]
+  },
+  {
+    id: "rhyme-04",
+    title: "Eye Rhymes vs. Ear Rhymes",
+    context: "Eye rhymes (like 'love' and 'move') look like they should rhyme on the page but differ in sound. This contrast foregrounds the tension between sight and sound in poetry.",
+    quote: "When the spade sinks into gravelly ground:\nMy father, digging.",
+    attribution: "— Seamus Heaney (from 'Digging')",
+    task: "Use at least two eye rhymes in a short poem, contrasting them with genuine (ear) rhymes.",
+    instructions: [
+      "Step 1: Brainstorm a list of words that visually suggest rhyme but diverge in pronunciation (e.g., 'bough'/'rough', 'laughter'/'slaughter').",
+      "Step 2: Write a 6-line poem that uses two pairs of eye-rhyming words at line ends.",
+      "Step 3: Also include one pair of perfect rhymes. Observe the shift in effect when the rhyme sounds real vs. just looks real.",
+      "Step 4: Read aloud—do you notice how the eye rhyme 'breaks' the expectation? Reflect on how this can be used to surprise the reader."
+    ],
+    created: "2025-02-27",
+    lastModified: "2025-02-27",
+    author: "Poetry Gym Team",
+    difficulty: 3,
+    estimatedTime: "15-20 minutes",
+    tags: ["rhyme", "sound"]
+  },
+  {
+    id: "rhyme-05",
+    title: "Enclosed Rhyme (ABBA)",
+    context: "Envelope rhyme (ABBA) frames lines within a 'rhyme circle.' This can create a sense of containment or reflection.",
+    quote: "Breaking through the moonlit waves,\nThose illusions we once believed;\nYet quietly, the heart still craves,\nFor wonders never truly perceived.",
+    attribution: "— Anonymous",
+    task: "Write a quatrain using an ABBA scheme, noticing how the enclosed lines (B B) are nested within the outer lines (A A).",
+    instructions: [
+      "Step 1: Draft four lines that revolve around a single topic or image. Label each line-end with a letter (A or B) to guide the rhyme.",
+      "Step 2: Make lines 1 and 4 rhyme (A . . A), and lines 2 and 3 rhyme (B B).",
+      "Step 3: Write a second quatrain continuing the same ABBA scheme but shifting the theme or perspective slightly.",
+      "Step 4: See if the enclosure of ABBA helps unify or circle back to the initial idea."
+    ],
+    created: "2025-02-27",
+    lastModified: "2025-02-27",
+    author: "Poetry Gym Team",
+    difficulty: 3,
+    estimatedTime: "10-15 minutes",
+    tags: ["rhyme", "stanza", "form"]
+  },
+  {
+    id: "rhyme-06",
+    title: "Surprise Last Couplet",
+    context: "A poem that doesn't rhyme until the final two lines creates a sudden sense of closure or emphasis, used effectively by many modern poets.",
+    quote: "Then all collapsed, and the great shroud of the sea rolled on as it rolled five thousand years ago.",
+    attribution: "— Herman Melville (from 'Moby-Dick')",
+    task: "Craft a poem that is unrhymed except for a final rhyming couplet.",
+    instructions: [
+      "Step 1: Write 6–8 lines of free verse about a topic that builds tension or anticipation.",
+      "Step 2: End the poem with two lines that rhyme perfectly, giving the sense of final punctuation.",
+      "Step 3: Evaluate how that sudden rhyme shift feels. Does it offer closure or highlight a concluding point?",
+      "Step 4: Optional: Try rewriting the final couplet with a slant rhyme for a subtler effect. Which version is more impactful?"
+    ],
+    created: "2025-02-27",
+    lastModified: "2025-02-27",
+    author: "Poetry Gym Team",
+    difficulty: 4,
+    estimatedTime: "15-20 minutes",
+    tags: ["rhyme", "form", "line-breaks"]
+  },
+  {
+    id: "rhyme-07",
+    title: "Rhyming Disparate Concepts",
+    context: "Unexpected rhymes across distinct semantic fields can spark creative leaps and humor. Linking two unrelated topics with rhyme forces fresh associations.",
+    quote: "I rhyme / To see myself, to set the darkness echoing.",
+    attribution: "— Seamus Heaney (slightly adapted from 'Personal Helicon')",
+    task: "Rhythmically fuse two different ideas using a rhyming pair drawn from each domain.",
+    instructions: [
+      "Step 1: Pick two contrasting fields (e.g., astronomy and cuisine). Find or invent a rhyming pair (like 'nebula'/'arugula' if you can stretch a near rhyme).",
+      "Step 2: Write at least 6 lines that weave these two words into a single poem, each concept hinting at the other.",
+      "Step 3: Include one more set of rhymes that similarly bridges unexpected worlds. Maybe 'quantum'/'blossom' (slant rhyme).",
+      "Step 4: Reflect on the comedic or enlightening effect of forcing these disparate ideas to coexist in rhyme."
+    ],
+    created: "2025-02-27",
+    lastModified: "2025-02-27",
+    author: "Poetry Gym Team",
+    difficulty: 4,
+    estimatedTime: "20 minutes",
+    tags: ["rhyme", "metaphor", "image-making"]
+  },
+  {
+    id: "rhyme-08",
+    title: "Monorhyme Experiment",
+    context: "A stanza (or entire poem) where every line rhymes with the same sound (monorhyme) can feel incantatory, obsessive, or even comedic.",
+    quote: "Unwearied still, lover by lover,\nThey paddle in the cold,\nCompanionable as the one repeated rhyme.",
+    attribution: "— Adapted from W.B. Yeats, 'The Wild Swans at Coole'",
+    task: "Write 4–6 lines that all end with the same rhyme, examining the hypnotic effect of monorhyme.",
+    instructions: [
+      "Step 1: Select a strong, versatile rhyme ending (e.g., -ight).",
+      "Step 2: Draft 4–6 lines, each concluding with a word that features that ending (light, fight, night, sight, might, etc.).",
+      "Step 3: Read the stanza aloud—notice the chant-like repetition. Revise if needed to avoid forced language.",
+      "Step 4: If you wish, try a second stanza that uses a new monorhyme or breaks the pattern entirely for contrast."
+    ],
+    created: "2025-02-27",
+    lastModified: "2025-02-27",
+    author: "Poetry Gym Team",
+    difficulty: 2,
+    estimatedTime: "10 minutes",
+    tags: ["rhyme", "repetition", "sound"]
+  },
+  {
+    id: "rhyme-09",
+    title: "Multi-Syllabic Rhyme Challenge",
+    context: "Complex rhymes spanning multiple syllables appear frequently in rap and hip-hop, showcasing intricate sonic textures beyond simple single-syllable end rhymes.",
+    quote: "\"It's poetry in motion, but devotion isn't portioned,\nI'm contorting my distortions, exploring these oceans.\"",
+    attribution: "— Imagined lines, hip-hop-inspired style",
+    task: "Write a poem that features at least one multi-syllabic rhyme pair, highlighting the rhythmic flair this can add.",
+    instructions: [
+      "Step 1: Brainstorm pairs of phrases that share 2–3 syllables at the end (e.g., 'elevated story' / 'celebrated glory').",
+      "Step 2: Incorporate at least one multi-syllabic rhyme pair into a short, 4-line stanza, ensuring the entire phrase rhymes.",
+      "Step 3: Write a second stanza that uses a different multi-syllabic pair.",
+      "Step 4: Read everything aloud. How does the extended rhyme compare to single-syllable rhymes in terms of musicality?"
+    ],
+    created: "2025-02-27",
+    lastModified: "2025-02-27",
+    author: "Poetry Gym Team",
+    difficulty: 4,
+    estimatedTime: "20 minutes",
+    tags: ["rhyme", "sound", "rhythm"]
+  },
+  {
+    id: "rhyme-10",
+    title: "Chain Rhyme Links",
+    context: "Chain rhymes connect lines by rhyming a word from one line with a mid-line word in the next, creating a woven effect that pulls the reader forward.",
+    quote: "And miles to go before I sleep,\nWeep for the watchers in the gloom.",
+    attribution: "— Inspired by Robert Frost, creatively adapted",
+    task: "Construct a poem where the last word of one line rhymes with a word placed in the middle of the next line.",
+    instructions: [
+      "Step 1: Start with a line ending on a strong word (e.g., 'rain').",
+      "Step 2: In the next line, place a rhyming word ('brain') mid-line, then end that line with a new word (e.g., 'glow').",
+      "Step 3: For line 3, embed 'glow' in the middle, end with another new word (maybe 'flight'), and continue the pattern for at least 6 lines.",
+      "Step 4: Reflect on how this chain shapes continuity and momentum. Does it unify the poem’s progression?"
+    ],
+    created: "2025-02-27",
+    lastModified: "2025-02-27",
+    author: "Poetry Gym Team",
+    difficulty: 4,
+    estimatedTime: "15-20 minutes",
+    tags: ["rhyme", "line-breaks", "sound"]
+  },
+  {
+    id: "rhyme-11",
+    title: "Odd Rhyme Discovery",
+    context: "Using a rhyming dictionary or website can lead you to unexpected rhymes, pushing you beyond familiar word choices. This fosters creativity in content as well as sound.",
+    quote: "No surprise in the writer, no surprise in the reader.",
+    attribution: "— Robert Frost",
+    task: "Find an unusual rhyme for a tricky word and build a playful poem around it.",
+    instructions: [
+      "Step 1: Pick a word that’s traditionally 'hard to rhyme' (e.g., 'orange' or 'silver').",
+      "Step 2: Use a rhyming dictionary/online resource to find an exact or near rhyme (e.g., 'door-hinge' for 'orange').",
+      "Step 3: Write a short, humorous poem that ends each line with variations of that rhyme. Enjoy the novelty!",
+      "Step 4: Challenge yourself to maintain coherence in the poem while using these odd rhymes."
+    ],
+    created: "2025-02-27",
+    lastModified: "2025-02-27",
+    author: "Poetry Gym Team",
+    difficulty: 3,
+    estimatedTime: "15 minutes",
+    tags: ["rhyme", "sound"]
+  },
+  {
+    id: "rhyme-12",
+    title: "Mid-Line Rhyme Pop",
+    context: "Rhymes aren’t restricted to line ends: two consecutive words in the middle of a line can create a sudden, attention-grabbing sound effect.",
+    quote: "In the room the women come and go\nTalking of Michelangelo.",
+    attribution: "— T.S. Eliot (from 'The Love Song of J. Alfred Prufrock')",
+    task: "Place at least two consecutive words that rhyme within a single line, testing how in-line rhyme alters sonic emphasis.",
+    instructions: [
+      "Step 1: Draft a 4-line stanza on any topic. Identify one line to contain a pair of back-to-back rhyming words (e.g., 'quiet riot').",
+      "Step 2: Add a second mid-line rhyme pair in another line for consistency.",
+      "Step 3: Read your stanza out loud. Does the internal rhyme leap out, or does it flow naturally?",
+      "Step 4: Adjust spacing or punctuation to highlight the rhyming pair if needed. Keep the rest of the poem free from end rhymes for contrast."
+    ],
+    created: "2025-02-27",
+    lastModified: "2025-02-27",
+    author: "Poetry Gym Team",
+    difficulty: 2,
+    estimatedTime: "10-15 minutes",
+    tags: ["rhyme", "sound", "line-breaks"]
+  },
+  {
+    id: "rhyme-13",
+    title: "Heroic Couplets in Iambic Pentameter",
+    context: "Heroic couplets combine strict meter (iambic pentameter) with end-rhymes. They were beloved by Alexander Pope for satirical and philosophical verse.",
+    quote: "A little learning is a dangerous thing;\nDrink deep, or taste not the Pierian spring.",
+    attribution: "— Alexander Pope, 'Essay on Criticism'",
+    task: "Write a short passage in heroic couplets, paying attention to both meter and rhyme.",
+    instructions: [
+      "Step 1: Draft 4 lines in iambic pentameter (da-DUM da-DUM da-DUM da-DUM da-DUM), ensuring lines 1 & 2 rhyme, and lines 3 & 4 rhyme.",
+      "Step 2: Read it aloud while tapping your foot to maintain the iambic beat. Adjust words if a stress pattern feels off.",
+      "Step 3: Add two more lines, continuing the couplet pattern. Now you have 6 lines total.",
+      "Step 4: Reflect on how imposing meter + rhyme shapes your word choice and tone."
+    ],
+    created: "2025-02-27",
+    lastModified: "2025-02-27",
+    author: "Poetry Gym Team",
+    difficulty: 4,
+    estimatedTime: "20 minutes",
+    tags: ["rhyme", "form", "rhythm", "prosody"]
+  },
+  {
+    id: "rhyme-14",
+    title: "Dialogue-Only Rhyme",
+    context: "Allowing only the speaker’s dialogue to rhyme while the rest of the poem remains free can highlight those spoken lines as special or lyrical.",
+    quote: "If you can dream—and not make dreams your master;",
+    attribution: "— Rudyard Kipling (from 'If—')",
+    task: "Write a poem in which the speaker’s quotes are the only rhyming portion.",
+    instructions: [
+      "Step 1: Draft a short scene or narrative. Use 6–8 lines of free verse to set the context.",
+      "Step 2: Insert dialogue in at least two places. Those lines of dialogue should rhyme (end rhyme or slant rhyme).",
+      "Step 3: The rest of the text remains unrhymed. Observe how the dialogue stands out.",
+      "Step 4: Revise if needed to ensure the rhymes in dialogue sound natural for the speaker’s voice."
+    ],
+    created: "2025-02-27",
+    lastModified: "2025-02-27",
+    author: "Poetry Gym Team",
+    difficulty: 3,
+    estimatedTime: "15-20 minutes",
+    tags: ["rhyme", "voice"]
+  },
+  {
+    id: "rhyme-15",
+    title: "Consistent Slant Rhyme Pattern",
+    context: "Committing to the same slant rhyme for every line-end fosters subtle unity. Contemporary poets often prefer the gentle echo of consistent vowel or consonant patterns.",
+    quote: "Not quite out of tune,\nBut near enough to ring the mind anew.",
+    attribution: "— Imagined snippet",
+    task: "End each line in your poem with words that share the same vowel sound but differ by consonants.",
+    instructions: [
+      "Step 1: Choose a base vowel (e.g., a long 'i' sound: time, mind, side, kind).",
+      "Step 2: Write a 6-line poem, ensuring each end-word contains that sound (they can be slant: 'knife' might also fit if you stretch it).",
+      "Step 3: Read it aloud to confirm the subtle echo. Does it unify the stanza?",
+      "Step 4: Optionally, break the pattern on the final line for dramatic effect—and see how that stands out."
+    ],
+    created: "2025-02-27",
+    lastModified: "2025-02-27",
+    author: "Poetry Gym Team",
+    difficulty: 3,
+    estimatedTime: "15 minutes",
+    tags: ["rhyme", "sound", "assonance"]
+  },
+  {
+    id: "rhyme-16",
+    title: "Identical Rhyme Once",
+    context: "Rhyming a word with itself is typically avoided, but doing it strategically can draw intense focus to that repeated word.",
+    quote: "The woods are lovely, dark and deep,\nBut I have promises to keep,",
+    attribution: "— Robert Frost (from 'Stopping by Woods on a Snowy Evening')",
+    task: "Use one instance of identical rhyme (the same word at line ends) in an otherwise normal rhyming poem.",
+    instructions: [
+      "Step 1: Write an 8-line poem with a simple ABAB CDCD rhyme scheme, ensuring variety in your end-words.",
+      "Step 2: In one pair, use the exact same word for both lines (identical rhyme). E.g., 'light' / 'light.'",
+      "Step 3: Reflect on that moment—does it underscore an idea, or feel repetitive? Tweak the line to maximize impact.",
+      "Step 4: Decide if you want to keep it identical or shift it to a near-duplicate (e.g., 'lights') for a subtler effect."
+    ],
+    created: "2025-02-27",
+    lastModified: "2025-02-27",
+    author: "Poetry Gym Team",
+    difficulty: 3,
+    estimatedTime: "15 minutes",
+    tags: ["rhyme", "repetition"]
+  },
+  {
+    id: "rhyme-17",
+    title: "Front-Rhyme Lines",
+    context: "Also called 'head rhyme,' front-rhyme places matching sounds at line beginnings, akin to strong alliteration across lines.",
+    quote: "With swift, slow; sweet, sour; adazzle, dim...",
+    attribution: "— Gerard Manley Hopkins (from 'Pied Beauty')",
+    task: "Start several lines with words that rhyme, reversing the usual end-rhyme pattern.",
+    instructions: [
+      "Step 1: Pick a set of words that rhyme or nearly rhyme (e.g., 'hear,' 'near,' 'fear').",
+      "Step 2: Write a 4–5 line poem, beginning each line with one of these words. Keep the rest of the line free from rhyme constraints.",
+      "Step 3: Read aloud to sense how the repeated opening sound shapes the poem’s cadence.",
+      "Step 4: Vary word order or add punctuation if you want to emphasize or mask the front-rhyme effect."
+    ],
+    created: "2025-02-27",
+    lastModified: "2025-02-27",
+    author: "Poetry Gym Team",
+    difficulty: 4,
+    estimatedTime: "15-20 minutes",
+    tags: ["rhyme", "alliteration", "sound"]
+  },
+  {
+    id: "rhyme-18",
+    title: "Foreign Flavor Rhyme",
+    context: "Blending languages can yield innovative rhyme pairs and broaden your ear for phonetic possibilities. It also invites cross-cultural wordplay.",
+    quote: "Hay que inventar un lenguaje que todos comprendan,\nUn verso que salte las fronteras.",
+    attribution: "— Inspired by Pablo Neruda (paraphrased)",
+    task: "Incorporate a second language (or borrowed words) to form an unusual rhyme pair with English (or your main language).",
+    instructions: [
+      "Step 1: Select a second language you know (or pick a few foreign words). Find an English word that rhymes or nearly rhymes with it.",
+      "Step 2: Write a short poem (6–8 lines) weaving those bilingual rhymes at line ends or mid-lines.",
+      "Step 3: Notice how the foreign words might bring new connotations and sonic textures.",
+      "Step 4: If you’re comfortable, expand to a second stanza mixing more borrowed words. Keep the poem coherent for readers."
+    ],
+    created: "2025-02-27",
+    lastModified: "2025-02-27",
+    author: "Poetry Gym Team",
+    difficulty: 5,
+    estimatedTime: "20-30 minutes",
+    tags: ["rhyme", "sound", "global", "voice"]
+  },
+  {
+    id: "rhyme-19",
+    title: "Two-Take Couplet",
+    context: "Predictable rhymes can sometimes feel dull. Swapping out one line’s end-word for something unexpected can inject fresh energy.",
+    quote: "At dawn the crow calls,\nIt startles even the silent walls.",
+    attribution: "— Anonymous",
+    task: "Write two versions of the same two-line couplet: the first with an obvious rhyme, the second with a surprising or off-kilter rhyme.",
+    instructions: [
+      "Step 1: Draft a quick couplet with an easy, expected rhyme (moon/spoon, night/light).",
+      "Step 2: Rewrite the second line, replacing the rhyme with a more unusual one (night/kite or something slightly off).",
+      "Step 3: Compare how each version changes the tone or surprise factor.",
+      "Step 4: (Optional) Expand to four lines (two couplets) using the same approach—first couplet safe, second couplet subverted."
+    ],
+    created: "2025-02-27",
+    lastModified: "2025-02-27",
+    author: "Poetry Gym Team",
+    difficulty: 2,
+    estimatedTime: "10 minutes",
+    tags: ["rhyme", "revision", "sound"]
+  },
+  {
+    id: "rhyme-20",
+    title: "Cross-Stanza Rhyme",
+    context: "Rhyming across stanzas can unify separated sections, drawing subtle connections between ideas in each stanza.",
+    quote: "Some truths are too deep for shallow rhymes,\nThey echo beyond the lines that bind them.",
+    attribution: "— Imagined snippet",
+    task: "Link stanzas by carrying a rhyme from the final line of one stanza to the first line of the next.",
+    instructions: [
+      "Step 1: Write two separate stanzas, each 3–4 lines, on loosely related images or moments.",
+      "Step 2: End stanza 1 on a word (e.g., 'door'). Begin stanza 2 with a line-end that rhymes ('floor').",
+      "Step 3: If you add a third stanza, repeat the technique: end stanza 2 with a new rhyme anchor for stanza 3.",
+      "Step 4: Read all stanzas aloud. Does the cross-stanza rhyme help them feel more cohesive?"
+    ],
+    created: "2025-02-27",
+    lastModified: "2025-02-27",
+    author: "Poetry Gym Team",
+    difficulty: 4,
+    estimatedTime: "15 minutes",
+    tags: ["rhyme", "stanza", "structure"]
+  }
 ];
     
     // Export public methods
