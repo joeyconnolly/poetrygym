@@ -260,7 +260,7 @@ const PoetryGymData = (function() {
         author: "Poetry Gym Team",
         difficulty: 3,
         estimatedTime: "15-20 minutes",
-        tags: ["slant rhyme", "sound", "prosody"]
+        tags: ["rhyme", "sound", "prosody"]
     },
     {
         id: "internal-rhymes-01",
@@ -280,7 +280,7 @@ const PoetryGymData = (function() {
         author: "Poetry Gym Team",
         difficulty: 4,
         estimatedTime: "15-20 minutes",
-        tags: ["internal rhyme", "sound", "rhythm"]
+        tags: ["rhyme", "sound", "rhythm"]
     },
     {
         id: "contrast-rhymes-01",
@@ -300,7 +300,7 @@ const PoetryGymData = (function() {
         author: "Poetry Gym Team",
         difficulty: 3,
         estimatedTime: "15-20 minutes",
-        tags: ["rhyme contrast", "prosody", "sound"]
+        tags: ["rhyme", "prosody", "sound"]
     },
     {
         id: "masculine-feminine-01",
@@ -340,7 +340,7 @@ const PoetryGymData = (function() {
         author: "Poetry Gym Team",
         difficulty: 4,
         estimatedTime: "15-20 minutes",
-        tags: ["sound play", "invented words", "rhyme"]
+        tags: ["prosody", "invented words", "rhyme"]
     },
     {
         id: "couplet-focus-01",
