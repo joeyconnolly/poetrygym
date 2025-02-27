@@ -821,6 +821,306 @@ const PoetryGymData = (function() {
     difficulty: 4,
     estimatedTime: "15 minutes",
     tags: ["rhyme", "stanza", "structure"]
+  },
+  {
+    id: "linebreaks-01",
+    title: "End-Stopped vs. Enjambed",
+    context: "Line breaks influence pacing and meaning. End-stopped lines feel contained and final, while enjambment propels the reader forward.",
+    quote: "The world is charged with the grandeur of God.\nIt will flame out, like shining from shook foil;",
+    attribution: "— Gerard Manley Hopkins (from 'God’s Grandeur')",
+    task: "Write two versions of the same poem—one with all end-stopped lines, the other heavily enjambed.",
+    instructions: [
+      "Step 1: Write a short, 6–8 line poem. Keep each line end-stopped (sentences finish neatly at each line break).",
+      "Step 2: Rewrite the same poem, this time extending phrases across multiple lines using enjambment.",
+      "Step 3: Compare the two versions. How does the rhythm change? Does enjambment alter the meaning?",
+      "Step 4: Revise the second version to maximize tension and flow."
+    ],
+    created: "2025-02-27",
+    lastModified: "2025-02-27",
+    author: "Poetry Gym Team",
+    difficulty: 3,
+    estimatedTime: "20 minutes",
+    tags: ["line-breaks", "enjambment", "structure"]
+  },
+  {
+    id: "linebreaks-02",
+    title: "Purposeful Enjambment",
+    context: "Strategic enjambment can shift meaning mid-line, delaying clarity or forcing reinterpretation.",
+    quote: "I first surmised the Horses' Heads\nWere toward Eternity—",
+    attribution: "— Emily Dickinson (from 'Because I could not stop for Death')",
+    task: "Compose a poem that uses enjambment to create double meanings.",
+    instructions: [
+      "Step 1: Write a short poem where at least three lines end on a word that suggests one meaning, only to shift upon reading the next line.",
+      "Step 2: Ensure the break delays full understanding, creating surprise or ambiguity.",
+      "Step 3: Read aloud and note where the tension builds. Adjust line breaks for maximum effect.",
+      "Step 4: Optional: Rewrite one stanza with different enjambments to see how meaning changes."
+    ],
+    created: "2025-02-27",
+    lastModified: "2025-02-27",
+    author: "Poetry Gym Team",
+    difficulty: 4,
+    estimatedTime: "20-25 minutes",
+    tags: ["line-breaks", "enjambment", "meaning"]
+  },
+  {
+    id: "linebreaks-03",
+    title: "Caesura Placement",
+    context: "A caesura is a strong mid-line pause, often marked by punctuation, that controls pacing and emphasis.",
+    quote: "To be, or not to be, — that is the question:",
+    attribution: "— William Shakespeare (from 'Hamlet')",
+    task: "Write a poem with strong mid-line pauses to control rhythm and emphasis.",
+    instructions: [
+      "Step 1: Draft a 6–10 line poem, inserting at least one caesura (mid-line pause) per line.",
+      "Step 2: Use punctuation (commas, dashes, semicolons) to create these pauses.",
+      "Step 3: Read aloud, emphasizing the caesuras. Do they enhance drama, hesitation, or rhythm?",
+      "Step 4: Experiment by shifting or removing caesuras—what effect does this have?"
+    ],
+    created: "2025-02-27",
+    lastModified: "2025-02-27",
+    author: "Poetry Gym Team",
+    difficulty: 3,
+    estimatedTime: "15-20 minutes",
+    tags: ["line-breaks", "caesura", "sound"]
+  },
+  {
+    id: "linebreaks-04",
+    title: "Breath and Breaks",
+    context: "Line breaks can mirror natural breath patterns, shaping the poem’s rhythm intuitively.",
+    quote: "A line is a unit of breath.",
+    attribution: "— Charles Olson (paraphrased)",
+    task: "Write a poem where each line ends where you naturally pause for breath.",
+    instructions: [
+      "Step 1: Speak a spontaneous sentence aloud, noting where you naturally pause.",
+      "Step 2: Draft a short poem, using line breaks to match those breathing pauses.",
+      "Step 3: Read it aloud—does it feel organic? If not, adjust the breaks to better reflect your breath.",
+      "Step 4: Compare to a version with more structured, even line lengths. Which feels more natural?"
+    ],
+    created: "2025-02-27",
+    lastModified: "2025-02-27",
+    author: "Poetry Gym Team",
+    difficulty: 3,
+    estimatedTime: "15-20 minutes",
+    tags: ["line-breaks", "rhythm", "voice"]
+  },
+  {
+    id: "linebreaks-05",
+    title: "Visual Impact",
+    context: "Line lengths shape how a poem looks on the page, influencing readability and emphasis.",
+    quote: "I saw the best minds of my generation destroyed by madness, starving hysterical naked,",
+    attribution: "— Allen Ginsberg (from 'Howl')",
+    task: "Create a poem where line lengths vary dramatically for visual effect.",
+    instructions: [
+      "Step 1: Draft a short poem with consistent, evenly spaced lines.",
+      "Step 2: Rewrite it, experimenting with line length variation—some lines long, some abrupt.",
+      "Step 3: Observe how different visual structures change the poem’s impact on the page.",
+      "Step 4: Decide on a final version that balances meaning with visual form."
+    ],
+    created: "2025-02-27",
+    lastModified: "2025-02-27",
+    author: "Poetry Gym Team",
+    difficulty: 4,
+    estimatedTime: "20 minutes",
+    tags: ["line-breaks", "visual-form", "structure"]
+  },
+    {
+    id: "linebreaks-06",
+    title: "Multiple Readings",
+    context: "Enjambment can control pacing, making a poem feel different when read quickly versus slowly.",
+    quote: "The apparition of these faces in the crowd;\nPetals on a wet, black bough.",
+    attribution: "— Ezra Pound (from 'In a Station of the Metro')",
+    task: "Draft a poem that reads differently depending on whether it is read quickly or slowly.",
+    instructions: [
+      "Step 1: Write a short poem with a mix of short, abrupt lines and long, flowing lines.",
+      "Step 2: Use enjambment to push the reader forward in some places while creating natural pauses in others.",
+      "Step 3: Read it aloud twice—once quickly, once slowly. Does the meaning shift?",
+      "Step 4: Revise any lines where the pacing doesn’t create a distinct effect."
+    ],
+    created: "2025-02-27",
+    lastModified: "2025-02-27",
+    author: "Poetry Gym Team",
+    difficulty: 4,
+    estimatedTime: "20-25 minutes",
+    tags: ["line-breaks", "enjambment", "pacing"]
+  },
+  {
+    id: "linebreaks-07",
+    title: "Emotional Shifts",
+    context: "Line breaks and caesuras can mirror changes in tone, helping to guide the reader’s emotional journey.",
+    quote: "A sudden blow: the great wings beating still\nAbove the staggering girl, her thighs caressed\nBy the dark webs, her nape caught in his bill,",
+    attribution: "— W.B. Yeats (from 'Leda and the Swan')",
+    task: "Write a poem where a shift in emotion is mirrored by line breaks and caesuras.",
+    instructions: [
+      "Step 1: Choose an emotion that undergoes a shift (e.g., joy to sorrow, anger to calm).",
+      "Step 2: Write a stanza where the first half has fluid, connected lines, and the second half has abrupt breaks or pauses.",
+      "Step 3: Use caesuras (mid-line punctuation) in places where the shift is most dramatic.",
+      "Step 4: Read it aloud. Does the rhythm reinforce the emotional change?"
+    ],
+    created: "2025-02-27",
+    lastModified: "2025-02-27",
+    author: "Poetry Gym Team",
+    difficulty: 4,
+    estimatedTime: "20 minutes",
+    tags: ["line-breaks", "caesura", "tone"]
+  },
+  {
+    id: "linebreaks-08",
+    title: "Punctuation Alternatives",
+    context: "Line breaks and caesuras can function as punctuation, shaping rhythm and emphasis without traditional marks.",
+    quote: "so much depends\nupon\na red wheel\nbarrow",
+    attribution: "— William Carlos Williams (from 'The Red Wheelbarrow')",
+    task: "Write a poem that replaces punctuation with strategic line breaks and caesuras.",
+    instructions: [
+      "Step 1: Write a short poem using commas, periods, and dashes normally.",
+      "Step 2: Rewrite it, replacing most punctuation with line breaks and pauses.",
+      "Step 3: Ensure the meaning is still clear through spacing and structure.",
+      "Step 4: Read both versions aloud. Which one feels more natural?"
+    ],
+    created: "2025-02-27",
+    lastModified: "2025-02-27",
+    author: "Poetry Gym Team",
+    difficulty: 3,
+    estimatedTime: "15-20 minutes",
+    tags: ["line-breaks", "caesura", "punctuation"]
+  },
+  {
+    id: "linebreaks-09",
+    title: "Fragmented Narrative",
+    context: "Enjambment can create a disjointed, suggestive story by breaking a narrative into non-linear pieces.",
+    quote: "One day you finally knew\nwhat you had to do, and began,",
+    attribution: "— Mary Oliver (from 'The Journey')",
+    task: "Compose a narrative poem that uses enjambment to fragment a story into suggestive pieces.",
+    instructions: [
+      "Step 1: Choose a brief story or moment (e.g., a breakup, a childhood memory, an escape).",
+      "Step 2: Write it in complete sentences first, then break it into lines that feel disjointed and open-ended.",
+      "Step 3: Use gaps in information—let the reader infer what’s missing.",
+      "Step 4: Adjust enjambment to create a balance between clarity and mystery."
+    ],
+    created: "2025-02-27",
+    lastModified: "2025-02-27",
+    author: "Poetry Gym Team",
+    difficulty: 5,
+    estimatedTime: "25-30 minutes",
+    tags: ["line-breaks", "enjambment", "narrative"]
+  },
+  {
+    id: "linebreaks-10",
+    title: "Call and Response",
+    context: "A caesura at the end of one line can create tension that is resolved (or echoed) in the next.",
+    quote: "I have eaten\nthe plums\nthat were in\nthe icebox",
+    attribution: "— William Carlos Williams (from 'This Is Just to Say')",
+    task: "Experiment with a poem where one line’s end (with a caesura) prompts a contrasting or echoing start on the next line.",
+    instructions: [
+      "Step 1: Write a poem where each line contains two contrasting or echoing halves, divided by a caesura.",
+      "Step 2: Example: 'She left // without a word' followed by 'A note // crumpled in the sink'.",
+      "Step 3: Adjust the spacing and punctuation—should the pauses feel abrupt or lingering?",
+      "Step 4: Experiment with alternative pairings to see which create the strongest tension or rhythm."
+    ],
+    created: "2025-02-27",
+    lastModified: "2025-02-27",
+    author: "Poetry Gym Team",
+    difficulty: 4,
+    estimatedTime: "20-25 minutes",
+    tags: ["line-breaks", "caesura", "persona"]
+  },
+{
+    id: "voice-06",
+    title: "Authentic Self",
+    context: "Writing in your natural voice can create an immediate connection with the reader and enhance emotional honesty.",
+    quote: "The world is too much with us; late and soon,\nGetting and spending, we lay waste our powers;",
+    attribution: "— William Wordsworth (from 'The World is Too Much With Us')",
+    task: "Write a poem using your natural voice to capture a personal moment or feeling.",
+    instructions: [
+      "Step 1: Choose a specific memory, feeling, or moment that is personally meaningful.",
+      "Step 2: Write in the way you naturally speak—avoid forced formality or poetic embellishment.",
+      "Step 3: Focus on clarity, honesty, and the rhythm of your everyday language.",
+      "Step 4: Read it aloud. Does it sound like you? Adjust any lines that feel artificial."
+    ],
+    created: "2025-02-27",
+    lastModified: "2025-02-27",
+    author: "Poetry Gym Team",
+    difficulty: 3,
+    estimatedTime: "15-20 minutes",
+    tags: ["voice", "personal", "authenticity"]
+  },
+  {
+    id: "voice-07",
+    title: "Adopt a Persona",
+    context: "A persona poem allows the poet to step into another character’s voice and worldview.",
+    quote: "I am the darker brother.\nThey send me to eat in the kitchen\nWhen company comes,",
+    attribution: "— Langston Hughes (from 'I, Too')",
+    task: "Rewrite the same poem as if spoken by a different character (a historical figure, a fictional being, etc.).",
+    instructions: [
+      "Step 1: Take a poem you've written in your own voice and select a new persona.",
+      "Step 2: Adjust the vocabulary, tone, and perspective to fit the chosen character.",
+      "Step 3: Consider how their experiences, beliefs, and emotions shape the poem.",
+      "Step 4: Compare both versions—how does shifting persona change the poem’s meaning?"
+    ],
+    created: "2025-02-27",
+    lastModified: "2025-02-27",
+    author: "Poetry Gym Team",
+    difficulty: 4,
+    estimatedTime: "20-25 minutes",
+    tags: ["persona", "perspective", "voice"]
+  },
+  {
+    id: "voice-08",
+    title: "Dual Voices",
+    context: "Writing in two distinct voices can add tension, contrast, or interplay within a poem.",
+    quote: "I grow old … I grow old …\nI shall wear the bottoms of my trousers rolled.",
+    attribution: "— T.S. Eliot (from 'The Love Song of J. Alfred Prufrock')",
+    task: "Compose a dialogue poem where two distinct voices interact, each with their own diction and tone.",
+    instructions: [
+      "Step 1: Choose two contrasting characters or perspectives (e.g., past vs. future self, a parent and child, two strangers).",
+      "Step 2: Write alternating lines or stanzas where each voice has a distinct tone and vocabulary.",
+      "Step 3: Ensure each character's speech style is recognizable—one formal, one casual; one poetic, one blunt, etc.",
+      "Step 4: Revise to enhance tension or complementarity between the voices."
+    ],
+    created: "2025-02-27",
+    lastModified: "2025-02-27",
+    author: "Poetry Gym Team",
+    difficulty: 4,
+    estimatedTime: "20-30 minutes",
+    tags: ["dialogue", "voice", "contrast"]
+  },
+  {
+    id: "voice-09",
+    title: "Narrative Shift",
+    context: "Switching from first to second person can engage the reader differently and shift the poem’s intimacy.",
+    quote: "You do not do, you do not do\nAny more, black shoe\nIn which I have lived like a foot",
+    attribution: "— Sylvia Plath (from 'Daddy')",
+    task: "Experiment with a poem written in the first person and then revise it in the second person to engage the reader directly.",
+    instructions: [
+      "Step 1: Write a poem in the first person ('I') about a personal experience.",
+      "Step 2: Rewrite the poem in the second person ('you'), making the reader inhabit the experience.",
+      "Step 3: Observe how the emotional effect shifts—does it feel more direct, accusatory, or immersive?",
+      "Step 4: Decide which version is stronger, or blend the two perspectives for added depth."
+    ],
+    created: "2025-02-27",
+    lastModified: "2025-02-27",
+    author: "Poetry Gym Team",
+    difficulty: 4,
+    estimatedTime: "20 minutes",
+    tags: ["perspective", "voice", "reader-engagement"]
+  },
+  {
+    id: "voice-10",
+    title: "Multiple Perspectives",
+    context: "A poem with shifting perspectives can offer a layered understanding of an event or emotion.",
+    quote: "And you O my soul where you stand,\nSurrounded, detached, in measureless oceans of space,",
+    attribution: "— Walt Whitman (from 'A Noiseless Patient Spider')",
+    task: "Write a poem that shifts perspectives between two or more characters or internal viewpoints.",
+    instructions: [
+      "Step 1: Choose a subject where different viewpoints exist (e.g., a breakup, a historic event, a personal conflict).",
+      "Step 2: Write a stanza from one perspective, then shift to another in the next stanza.",
+      "Step 3: Ensure each perspective has a distinct tone, vocabulary, or bias.",
+      "Step 4: Revise to make the shifts clear and meaningful, either through formatting or tonal changes."
+    ],
+    created: "2025-02-27",
+    lastModified: "2025-02-27",
+    author: "Poetry Gym Team",
+    difficulty: 5,
+    estimatedTime: "25-30 minutes",
+    tags: ["perspective", "voice", "contrast"]
   }
 ];
     
